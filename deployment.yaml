@@ -29,4 +29,4 @@ spec:
   - port: 80        # The port you type in your browser
     targetPort: 80  # The port your container is listening on
   selector:
-    app: nginx      # This MUST match the labels in your deployment.yaml
+    app: web      # This MUST match the labels in your deployment.yaml
