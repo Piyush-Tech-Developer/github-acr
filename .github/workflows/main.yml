@@ -46,3 +46,8 @@ jobs:
           # This forces the cluster to restart the pods with the new image
           kubectl rollout restart deployment/my-web-app
 
+      - name: Get Public IP
+        run: |
+          kubectl get service my-nginx-service
+
+
