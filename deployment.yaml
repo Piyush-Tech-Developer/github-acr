@@ -18,3 +18,15 @@ spec:
         image: ACRDockerUpload.azurecr.io/nginx:v1 
         ports:
         - containerPort: 80
+
+apiVersion: v1
+kind: Service
+metadata:
+  name: my-nginx-service
+spec:
+  type: LoadBalancer # This tells Azure to give you a real Public IP
+  ports:
+  - port: 80        # The port you type in your browser
+    targetPort: 80  # The port your container is listening on
+  selector:
+    app: nginx      # This MUST match the labels in your deployment.yaml
