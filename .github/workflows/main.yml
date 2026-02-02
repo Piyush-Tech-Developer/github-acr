@@ -27,5 +27,5 @@ jobs:
       - name: Pull and Push
         run: |
           docker pull nginx:latest
-          docker tag nginx:latest ACRDockerUpload.azurecr.io/nginx:v1
-          # docker push ACRDockerUpload.azurecr.io/nginx:v1
+          docker tag nginx:latest acrdockerupload.azurecr.io/nginx:v1
+          # docker push acrdockerupload.azurecr.io/nginx:v1
