@@ -38,10 +38,8 @@ jobs:
 
       - name: Deploy to Kubernetes
         run: |
-          # This command sends your yaml file to the cluster
           kubectl apply -f deployment.yaml
           
-          # This forces the cluster to restart the pods with the new image
           kubectl rollout restart deployment/my-web-app
 
       - name: Get Public IP
