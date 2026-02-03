@@ -25,7 +25,6 @@ kind: Service
 metadata:
   name: my-nginx-service
   annotations:
-    # This is the magic line for Azure
     service.beta.kubernetes.io/azure-load-balancer-internal: "true"
 spec:
   type: LoadBalancer
